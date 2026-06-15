@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auctor AI — книги, написанные искусственным интеллектом</title>
+<meta name="description" content="Auctor AI создаёт книгу по вашему замыслу: жанр, герои, сюжет, объём. Готовый текст в форматах FB2 и DOCX. Закажите книгу в Telegram — от идеи до файла.">
+<meta name="keywords" content="Auctor AI, книга на заказ, написать книгу, искусственный интеллект, нейросеть книга, FB2, DOCX, книга в подарок">
+<meta name="theme-color" content="#F4F0E6">
+<link rel="canonical" href="https://FreshCarrot-oss.github.io/auctor-site/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Auctor AI — книга, написанная для вас">
+<meta property="og:description" content="Книги, написанные искусственным интеллектом по вашему замыслу. Готовый текст в FB2 и DOCX.">
+<meta property="og:image" content="./assets/og.png">
+<meta property="og:url" content="https://FreshCarrot-oss.github.io/auctor-site/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Auctor AI — книга, написанная для вас">
+<meta name="twitter:description" content="Книги, написанные искусственным интеллектом. Готовый текст в FB2 и DOCX.">
+<meta name="twitter:image" content="./assets/og.png">
+<link rel="icon" type="image/png" href="./assets/favicon-256.png">
+<link rel="apple-touch-icon" href="./assets/favicon-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Auctor AI","description":"Книги, написанные искусственным интеллектом, на заказ.","url":"https://FreshCarrot-oss.github.io/auctor-site/","logo":"https://FreshCarrot-oss.github.io/auctor-site/assets/favicon-256.png"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"В каких форматах я получу книгу?","acceptedAnswer":{"@type":"Answer","text":"Готовая книга присылается файлами FB2 и DOCX прямо в Telegram."}},
+{"@type":"Question","name":"Сколько глав может быть в книге?","acceptedAnswer":{"@type":"Answer","text":"От 1 до 30 глав. Объём вы выбираете при оформлении заказа."}},
+{"@type":"Question","name":"Можно ли заказать обложку?","acceptedAnswer":{"@type":"Answer","text":"Да, обложка — отдельная опция и включает одну правку."}},
+{"@type":"Question","name":"Кто пишет книгу?","acceptedAnswer":{"@type":"Answer","text":"Книгу создаёт искусственный интеллект по вашим параметрам, после чего она проходит контроль качества, объёма и соответствия заказу."}}
+]}
+</script>
+<style>
+:root{
+  --bg:#F4F0E6; --bg2:#FBF9F3; --card:#FFFFFF; --ink:#13322E; --muted:#5C6B65;
+  --teal:#0E3B36; --accent:#12776B; --line:rgba(14,59,54,.16); --line2:rgba(14,59,54,.08);
+  --maxw:1140px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.muted{color:var(--muted)} .accent{color:var(--accent)}
+.aura{position:fixed;inset:0;z-index:-1;background:
+  radial-gradient(55% 45% at 12% 4%, rgba(18,119,107,.10), transparent 60%),
+  radial-gradient(45% 40% at 92% 2%, rgba(14,59,54,.07), transparent 60%),
+  radial-gradient(60% 60% at 50% 108%, rgba(18,119,107,.06), transparent 60%), var(--bg)}
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:.3s}
+header.scrolled{background:rgba(244,240,230,.82);border-bottom:1px solid var(--line2)}
+.nav{display:flex;align-items:center;gap:28px;height:74px}
+.brand{display:flex;align-items:baseline;gap:7px}
+.brand .wm{font-family:'Cormorant Garamond',serif;font-size:27px;font-weight:700;color:var(--teal);letter-spacing:.02em}
+.brand .ai{font-size:12px;font-weight:700;letter-spacing:.22em;color:var(--accent);text-transform:uppercase}
+.nav .links{display:flex;gap:26px;margin-left:auto}
+.nav .links a{color:var(--muted);font-size:14px;transition:.2s}
+.nav .links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:14px;transition:.25s;border:1px solid transparent;cursor:pointer}
+.btn-primary{background:var(--teal);color:#F4F0E6;box-shadow:0 8px 26px rgba(14,59,54,.22)}
+.btn-primary:hover{background:var(--accent);transform:translateY(-2px);box-shadow:0 14px 36px rgba(18,119,107,.30)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.nav .btn{margin-left:8px}
+@media(max-width:780px){.nav .links{display:none}}
+.hero{padding:128px 0 104px;text-align:center}
+.eyebrow{display:inline-block;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:8px 17px;margin-bottom:28px;background:var(--bg2)}
+.hero h1{font-size:clamp(46px,8.5vw,92px);line-height:1.02;font-weight:600;letter-spacing:-.02em;margin-bottom:24px;color:var(--teal)}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero p.lead{font-size:clamp(17px,2.3vw,21px);max-width:660px;margin:0 auto 38px;color:var(--muted)}
+.hero .cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero .note{margin-top:24px;font-size:13px;color:var(--muted)}
+section{padding:94px 0}
+.sec-head{max-width:680px;margin:0 auto 56px;text-align:center}
+.sec-head .tag{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)}
+.sec-head h2{font-size:clamp(32px,5vw,52px);font-weight:600;letter-spacing:-.01em;margin:14px 0;color:var(--teal)}
+.sec-head p{color:var(--muted);font-size:17px}
+.grid{display:grid;gap:20px}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:900px){.g3{grid-template-columns:1fr 1fr}}@media(max-width:620px){.g3,.g2{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line2);border-radius:18px;padding:30px;transition:.3s;box-shadow:0 1px 2px rgba(14,59,54,.04)}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 44px rgba(14,59,54,.10);border-color:var(--line)}
+.card .n{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--accent);font-weight:700}
+.card h3{font-size:20px;font-weight:600;margin:12px 0 10px;color:var(--teal)}
+.card p{color:var(--muted);font-size:15px}
+.ico{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;background:rgba(18,119,107,.10);border:1px solid var(--line2);color:var(--accent);font-size:20px}
+.price{display:flex;align-items:baseline;gap:8px;margin:6px 0 14px}
+.price .v{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:700;color:var(--teal)}
+.price .u{color:var(--muted);font-size:15px}
+.plist{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.plist li{display:flex;gap:10px;color:var(--muted);font-size:15px}.plist li::before{content:"—";color:var(--accent)}
+.featured{border-color:var(--accent);box-shadow:0 20px 50px rgba(18,119,107,.14)}
+.faq{max-width:820px;margin:0 auto}
+details{border:1px solid var(--line2);border-radius:14px;padding:0 22px;margin-bottom:12px;transition:.3s;background:var(--card)}
+details[open]{border-color:var(--line)}
+summary{list-style:none;cursor:pointer;padding:20px 0;font-weight:600;font-size:17px;display:flex;justify-content:space-between;gap:16px;color:var(--teal)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:24px;transition:.3s}
+details[open] summary::after{transform:rotate(45deg)}
+details .a{padding:0 0 22px;color:var(--muted)}
+.final{text-align:center;border:1px solid var(--line);border-radius:28px;background:radial-gradient(80% 130% at 50% 0%, rgba(18,119,107,.10), transparent 60%),var(--bg2);padding:78px 28px;margin:40px 0}
+.final h2{font-size:clamp(34px,5.5vw,58px);font-weight:600;letter-spacing:-.02em;margin-bottom:16px;color:var(--teal)}
+.final p{color:var(--muted);max-width:520px;margin:0 auto 32px;font-size:18px}
+footer{border-top:1px solid var(--line2);padding:48px 0 60px;color:var(--muted);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.foot a:hover{color:var(--ink)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+</style>
+</head>
+<body>
+<div class="aura"></div>
+<header id="hd">
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="Auctor AI"><span class="wm">Auctor</span><span class="ai">AI</span></a>
+    <nav class="links">
+      <a href="#how">Как это работает</a>
+      <a href="#features">Возможности</a>
+      <a href="#guide">Инструкция</a>
+      <a href="#pricing">Цены</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary" data-bot href="#">Открыть в Telegram</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow reveal">Auctor AI · книги, написанные ИИ</span>
+      <h1 class="serif reveal d1">Книга, написанная <em>для вас</em></h1>
+      <p class="lead reveal d2">Auctor AI превращает ваш замысел в законченную книгу. Вы задаёте жанр, героев, сюжет и объём — искусственный интеллект создаёт цельное произведение и присылает его файлами FB2 и DOCX.</p>
+      <div class="cta reveal d3">
+        <a class="btn btn-primary" data-bot href="#">Создать книгу</a>
+        <a class="btn btn-ghost" href="#how">Как это работает</a>
+      </div>
+      <p class="note reveal d3">От идеи до файла — без вашего участия. От 1 до 30 глав.</p>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="container">
+      <div class="sec-head reveal"><span class="tag">Процесс</span><h2 class="serif">Четыре шага до вашей книги</h2><p>Прозрачный путь от идеи до готового файла. Никаких брифов и переписок — только короткий диалог.</p></div>
+      <div class="grid g2">
+        <div class="card reveal"><div class="n">01</div><h3>Замысел</h3><p>Бот задаёт несколько вопросов: жанр, идея, герои, сцены, объём. Любой пункт можно доверить ИИ — он будет решён в духе вашего заказа.</p></div>
+        <div class="card reveal d1"><div class="n">02</div><h3>Смета</h3><p>Стоимость рассчитывается автоматически и прозрачно. Вы видите итог до оплаты и подтверждаете заказ.</p></div>
+        <div class="card reveal d2"><div class="n">03</div><h3>Создание</h3><p>Книга пишется автономно, глава за главой, и проходит контроль качества, объёма и соответствия вашему заказу.</p></div>
+        <div class="card reveal d3"><div class="n">04</div><h3>Доставка</h3><p>Готовое произведение приходит в Telegram файлами FB2 и DOCX вместе с карточкой книги.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <div class="sec-head reveal"><span class="tag">Возможности</span><h2 class="serif">Технология, доведённая до результата</h2><p>Внимание к деталям на каждом этапе — от формулировки замысла до финального файла.</p></div>
+      <div class="grid g3">
+        <div class="card reveal"><div class="ico">◆</div><h3>FB2 и DOCX</h3><p>Готовая книга в двух форматах — для читалок и для редактирования.</p></div>
+        <div class="card reveal d1"><div class="ico">❏</div><h3>1–30 глав</h3><p>Любой объём — от короткой повести до полноценного романа.</p></div>
+        <div class="card reveal d2"><div class="ico">✦</div><h3>Обложка</h3><p>Индивидуальная обложка по желанию, с одной правкой.</p></div>
+        <div class="card reveal"><div class="ico">⚡</div><h3>Срочное исполнение</h3><p>Опция приоритета — ваш заказ берётся в работу первым.</p></div>
+        <div class="card reveal d1"><div class="ico">✓</div><h3>Контроль качества</h3><p>Проверка объёма, логики и соответствия вашему замыслу перед выдачей.</p></div>
+        <div class="card reveal d2"><div class="ico">⛉</div><h3>Конфиденциальность</h3><p>Ваш замысел остаётся между вами и Auctor AI. Поддержка на связи всегда.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide">
+    <div class="container">
+      <div class="sec-head reveal"><span class="tag">Инструкция</span><h2 class="serif">Как сделать заказ</h2><p>Весь процесс — внутри Telegram. Это занимает пару минут.</p></div>
+      <div class="grid g2">
+        <div class="card reveal"><div class="n">1</div><h3>Откройте бота</h3><p>Нажмите «Открыть в Telegram» и запустите Auctor AI кнопкой «Старт».</p></div>
+        <div class="card reveal d1"><div class="n">2</div><h3>Ответьте на вопросы</h3><p>Опишите будущую книгу или доверьте детали ИИ. Чем подробнее замысел — тем точнее результат.</p></div>
+        <div class="card reveal d2"><div class="n">3</div><h3>Подтвердите смету</h3><p>Проверьте сводку и стоимость, при желании добавьте обложку или срочность, оплатите.</p></div>
+        <div class="card reveal d3"><div class="n">4</div><h3>Получите книгу</h3><p>Дождитесь готовых файлов FB2 и DOCX — они придут прямо в чат. Останется только читать.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="container">
+      <div class="sec-head reveal"><span class="tag">Цены</span><h2 class="serif">Прозрачная стоимость</h2><p>Базовая цена включает первые два авторских листа (≈80 000 знаков). Дальше — по мере объёма.</p></div>
+      <div class="grid g3">
+        <div class="card featured reveal"><h3>Книга</h3><div class="price"><span class="v">3 000</span><span class="u">₽ — старт</span></div><ul class="plist"><li>Первые 2 авторских листа включены</li><li>Каждый следующий лист — +500 ₽</li><li>Форматы FB2 и DOCX</li><li>Контроль качества и объёма</li></ul></div>
+        <div class="card reveal d1"><h3>Обложка</h3><div class="price"><span class="v">+300</span><span class="u">₽</span></div><ul class="plist"><li>Индивидуальный дизайн</li><li>Одна правка включена</li><li>Готовое изображение в чат</li></ul></div>
+        <div class="card reveal d2"><h3>Срочность</h3><div class="price"><span class="v">+1 000</span><span class="u">₽</span></div><ul class="plist"><li>Приоритет в очереди</li><li>Заказ берётся первым</li><li>Идеально для подарка к дате</li></ul></div>
+      </div>
+      <p class="muted reveal" style="text-align:center;margin-top:22px;font-size:14px">Точная смета формируется в боте до оплаты. Реферальная программа — до 20% скидки.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="sec-head reveal"><span class="tag">Вопросы</span><h2 class="serif">Коротко о главном</h2></div>
+      <div class="faq">
+        <details class="reveal"><summary>В каких форматах я получу книгу?</summary><div class="a">Готовая книга приходит файлами FB2 (для читалок) и DOCX (для редактирования) прямо в Telegram, вместе с карточкой книги.</div></details>
+        <details class="reveal"><summary>Кто и как пишет книгу?</summary><div class="a">Книгу создаёт искусственный интеллект по вашим параметрам. Перед выдачей она проходит контроль объёма, логики и соответствия заказу.</div></details>
+        <details class="reveal"><summary>Сколько это занимает времени?</summary><div class="a">Срок зависит от объёма и загрузки, обычно — от нескольких часов до пары дней. Опция срочности поднимает ваш заказ в начало очереди.</div></details>
+        <details class="reveal"><summary>Предусмотрены ли правки текста?</summary><div class="a">Правки готового текста не предусмотрены — поэтому важно подробно описать пожелания до оплаты. Обложка включает одну правку.</div></details>
+        <details class="reveal"><summary>Какой объём можно заказать?</summary><div class="a">От 1 до 30 глав. Можно задать точный объём в знаках или словах — мы выдержим его с небольшим допуском.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="final reveal">
+        <h2 class="serif">Создайте книгу, которой ещё не было</h2>
+        <p>Ваш замысел заслуживает воплощения. Откройте Auctor AI и закажите книгу за пару минут.</p>
+        <a class="btn btn-primary" data-bot href="#">Создать книгу в Telegram</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container foot">
+    <a class="brand" href="#top"><span class="wm">Auctor</span><span class="ai">AI</span></a>
+    <div>© <span id="yr"></span> Auctor AI</div>
+    <div><a data-bot href="#">Telegram</a> · <a data-bot href="#">Поддержка</a></div>
+  </div>
+</footer>
+<script>
+const BOT_URL = "https://t.me/auctor_ai_bot"; // ← укажите юзернейм вашего бота
+document.querySelectorAll("[data-bot]").forEach(a => a.href = BOT_URL);
+document.getElementById("yr").textContent = new Date().getFullYear();
+const hd = document.getElementById("hd");
+addEventListener("scroll", () => hd.classList.toggle("scrolled", scrollY > 20));
+const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}})},{threshold:.14});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
