@@ -108,6 +108,15 @@ footer{border-top:1px solid var(--line2);padding:48px 0 60px;color:var(--muted);
 .foot a:hover{color:var(--ink)}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+.marquee{overflow:hidden;padding:10px 0;-webkit-mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.track{display:flex;gap:22px;width:max-content;animation:scrollx 52s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.bk{flex:0 0 auto;display:block}
+.bk img{height:300px;width:auto;border-radius:16px;border:1px solid var(--line2);box-shadow:0 14px 34px rgba(14,59,54,.16);transition:transform .3s,box-shadow .3s;display:block}
+.bk:hover img{transform:translateY(-6px);box-shadow:0 24px 54px rgba(14,59,54,.26)}
+@keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.track{animation:none}}
 </style>
 </head>
 <body>
@@ -118,6 +127,7 @@ footer{border-top:1px solid var(--line2);padding:48px 0 60px;color:var(--muted);
     <nav class="links">
       <a href="#how">Как это работает</a>
       <a href="#features">Возможности</a>
+      <a href="#portfolio">Портфолио</a>
       <a href="#guide">Инструкция</a>
       <a href="#pricing">Цены</a>
       <a href="#faq">FAQ</a>
@@ -161,6 +171,28 @@ footer{border-top:1px solid var(--line2);padding:48px 0 60px;color:var(--muted);
         <div class="card reveal"><div class="ico">⚡</div><h3>Срочное исполнение</h3><p>Опция приоритета — ваш заказ берётся в работу первым.</p></div>
         <div class="card reveal d1"><div class="ico">✓</div><h3>Контроль качества</h3><p>Проверка объёма, логики и соответствия вашему замыслу перед выдачей.</p></div>
         <div class="card reveal d2"><div class="ico">⛉</div><h3>Конфиденциальность</h3><p>Ваш замысел остаётся между вами и Auctor AI. Поддержка на связи всегда.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <div class="sec-head reveal"><span class="tag">Портфолио</span><h2 class="serif">Книги, созданные с Auctor AI</h2><p>Реальные издания, написанные искусственным интеллектом и опубликованные на ЛитРес и Author.Today.</p></div>
+    </div>
+    <div class="marquee" aria-label="Лента обложек книг">
+      <div class="track">
+        <a class="bk" href="https://author.today/search?q=%D0%9A%D0%BB%D0%B5%D0%B9%D0%BC%D0%BE%20%D1%80%D0%BE%D0%B4%D0%B0%20%D0%92%D0%B5%D0%BB%D0%B5%D0%B4%D0%B8%D0%BD%D1%8B%D1%85&category=works" target="_blank" rel="noopener" title="Клеймо рода Велединых — Виктор Нокс"><img src="./assets/portfolio/1.png" alt="Клеймо рода Велединых — Виктор Нокс" loading="lazy"></a>
+        <a class="bk" href="https://www.litres.ru/search/?q=%D0%A4%D0%B8%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%B0%D1%8F%20%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D0%B0%20%D0%BB%D0%B5%D0%B4%D1%8F%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%B0" target="_blank" rel="noopener" title="Фиктивная невеста ледяного дракона — Ева Зимина"><img src="./assets/portfolio/2.png" alt="Фиктивная невеста ледяного дракона — Ева Зимина" loading="lazy"></a>
+        <a class="bk" href="https://www.litres.ru/search/?q=%D0%9B%D0%B6%D0%B5%D1%81%D0%B2%D0%B8%D0%B4%D0%B5%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%BB%D0%B5%D0%B4%D1%8F%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%B0" target="_blank" rel="noopener" title="Лжесвидетельница для ледяного дракона — Ева Зимина"><img src="./assets/portfolio/3.png" alt="Лжесвидетельница для ледяного дракона — Ева Зимина" loading="lazy"></a>
+        <a class="bk" href="https://www.litres.ru/search/?q=%D0%9D%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D0%B0%20%D0%BF%D0%BE%20%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B5%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%B0%20%D0%BE%D0%B3%D0%BD%D1%8F" target="_blank" rel="noopener" title="Невеста по ошибке для дракона огня — Ева Зимина"><img src="./assets/portfolio/4.png" alt="Невеста по ошибке для дракона огня — Ева Зимина" loading="lazy"></a>
+        <a class="bk" href="https://www.litres.ru/search/?q=%D0%9D%D0%B0%20%D1%81%D0%BF%D0%BE%D1%80" target="_blank" rel="noopener" title="На спор — Лея Сантер"><img src="./assets/portfolio/5.png" alt="На спор — Лея Сантер" loading="lazy"></a>
+        <a class="bk" href="https://www.litres.ru/search/?q=%D0%A5%D1%83%D0%B4%D0%B5%D0%B9%20%D0%B1%D0%B5%D0%B7%20%D1%81%D0%B8%D0%BB%D1%8B%20%D0%B2%D0%BE%D0%BB%D0%B8" target="_blank" rel="noopener" title="Худей без силы воли — Виктория Новачевская"><img src="./assets/portfolio/6.png" alt="Худей без силы воли — Виктория Новачевская" loading="lazy"></a>
+        <a class="bk" href="https://author.today/search?q=%D0%9A%D0%BB%D0%B5%D0%B9%D0%BC%D0%BE%20%D1%80%D0%BE%D0%B4%D0%B0%20%D0%92%D0%B5%D0%BB%D0%B5%D0%B4%D0%B8%D0%BD%D1%8B%D1%85&category=works" target="_blank" rel="noopener" title="Клеймо рода Велединых — Виктор Нокс"><img src="./assets/portfolio/1.png" alt="Клеймо рода Велединых — Виктор Нокс" loading="lazy"></a>
+        <a class="bk" href="https://www.litres.ru/search/?q=%D0%A4%D0%B8%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%B0%D1%8F%20%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D0%B0%20%D0%BB%D0%B5%D0%B4%D1%8F%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%B0" target="_blank" rel="noopener" title="Фиктивная невеста ледяного дракона — Ева Зимина"><img src="./assets/portfolio/2.png" alt="Фиктивная невеста ледяного дракона — Ева Зимина" loading="lazy"></a>
+        <a class="bk" href="https://www.litres.ru/search/?q=%D0%9B%D0%B6%D0%B5%D1%81%D0%B2%D0%B8%D0%B4%D0%B5%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%BB%D0%B5%D0%B4%D1%8F%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%B0" target="_blank" rel="noopener" title="Лжесвидетельница для ледяного дракона — Ева Зимина"><img src="./assets/portfolio/3.png" alt="Лжесвидетельница для ледяного дракона — Ева Зимина" loading="lazy"></a>
+        <a class="bk" href="https://www.litres.ru/search/?q=%D0%9D%D0%B5%D0%B2%D0%B5%D1%81%D1%82%D0%B0%20%D0%BF%D0%BE%20%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B5%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D1%80%D0%B0%D0%BA%D0%BE%D0%BD%D0%B0%20%D0%BE%D0%B3%D0%BD%D1%8F" target="_blank" rel="noopener" title="Невеста по ошибке для дракона огня — Ева Зимина"><img src="./assets/portfolio/4.png" alt="Невеста по ошибке для дракона огня — Ева Зимина" loading="lazy"></a>
+        <a class="bk" href="https://www.litres.ru/search/?q=%D0%9D%D0%B0%20%D1%81%D0%BF%D0%BE%D1%80" target="_blank" rel="noopener" title="На спор — Лея Сантер"><img src="./assets/portfolio/5.png" alt="На спор — Лея Сантер" loading="lazy"></a>
+        <a class="bk" href="https://www.litres.ru/search/?q=%D0%A5%D1%83%D0%B4%D0%B5%D0%B9%20%D0%B1%D0%B5%D0%B7%20%D1%81%D0%B8%D0%BB%D1%8B%20%D0%B2%D0%BE%D0%BB%D0%B8" target="_blank" rel="noopener" title="Худей без силы воли — Виктория Новачевская"><img src="./assets/portfolio/6.png" alt="Худей без силы воли — Виктория Новачевская" loading="lazy"></a>
       </div>
     </div>
   </section>
@@ -229,4 +261,4 @@ const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e
 document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 </script>
 </body>
-</html>
+</ht
